@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dg7vnni5sncqg"]
+
+[ext_resource type="Script" uid="uid://demlykhsg7gk3" path="res://src/ui/pop_up/line_edit/line_edit_popup.gd" id="1_r6r7e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.16078432, 0.18039216, 0.21960784, 1)
+
+[node name="line_edit_popup" type="Panel" unique_id=1682625935 node_paths=PackedStringArray("msg_label", "cancel_button", "confirm_button")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -94.0
+offset_right = 250.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+script = ExtResource("1_r6r7e")
+msg_label = NodePath("msg")
+cancel_button = NodePath("button_container/cancel")
+confirm_button = NodePath("button_container/add")
+msg_dist_to_bottom = 153
+
+[node name="input_container" type="HBoxContainer" parent="." unique_id=34999674]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -116.5
+offset_right = -8.0
+offset_bottom = -65.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="input_label" type="Label" parent="input_container" unique_id=1632627457]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Name : "
+
+[node name="name_input" type="LineEdit" parent="input_container" unique_id=935911552]
+custom_minimum_size = Vector2(388, 0)
+layout_mode = 2
+focus_mode = 1
+theme_override_font_sizes/font_size = 30
+
+[node name="button_container" type="HBoxContainer" parent="." unique_id=657542343]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -55.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="add" type="Button" parent="button_container" unique_id=1967108567]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Add"
+
+[node name="cancel" type="Button" parent="button_container" unique_id=868471183]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Cancel"
+
+[node name="msg" type="Label" parent="." unique_id=1738809160]
+custom_maximum_size = Vector2(400, 350)
+clip_contents = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 20.0
+offset_right = 200.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 25
+text = "Add new dialogues"
+horizontal_alignment = 1
+autowrap_mode = 3

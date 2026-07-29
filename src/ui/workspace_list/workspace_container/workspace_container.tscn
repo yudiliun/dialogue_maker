@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://cups4ui5h0blh"]
+
+[ext_resource type="Texture2D" uid="uid://brvapxolk61n4" path="res://asset/ui_texture/list_border.png" id="1_30cf0"]
+[ext_resource type="Script" uid="uid://ctqprvr2ei5ov" path="res://src/ui/workspace_list/workspace_container/workspace_container.gd" id="2_30cf0"]
+
+[node name="workspace_container" type="NinePatchRect" unique_id=175306102]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 70)
+custom_maximum_size = Vector2(-1, 70)
+offset_right = 478.0
+offset_bottom = 70.0
+texture = ExtResource("1_30cf0")
+patch_margin_bottom = 3
+script = ExtResource("2_30cf0")
+
+[node name="workspace_name" type="Label" parent="." unique_id=287676176]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -11.5
+offset_right = 50.0
+offset_bottom = 11.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "temp"
+
+[node name="edit" type="Button" parent="." unique_id=988228749]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -25.0
+offset_right = -14.0
+offset_bottom = 25.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Edit"
+
+[node name="del" type="Button" parent="." unique_id=1913471711]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -193.0
+offset_top = -25.0
+offset_right = -91.0
+offset_bottom = 25.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Delete"
+
+[node name="rename" type="Button" parent="." unique_id=1808543919]
+custom_minimum_size = Vector2(0, 50)
+custom_maximum_size = Vector2(-1, 50)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -328.0
+offset_top = -25.0
+offset_right = -201.0
+offset_bottom = 25.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Rename"
+
+[connection signal="button_up" from="edit" to="." method="_on_edit_button_up"]
+[connection signal="button_up" from="del" to="." method="_on_del_button_up"]
+[connection signal="button_up" from="rename" to="." method="_on_rename_button_up"]

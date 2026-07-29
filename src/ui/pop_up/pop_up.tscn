@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c50xmdepo2uy8"]
+
+[ext_resource type="Script" uid="uid://8utw4swbgucv" path="res://src/ui/pop_up/pop_up.gd" id="1_6yjqp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbqho"]
+bg_color = Color(0.16078432, 0.18039216, 0.21960784, 1)
+
+[node name="pop_up" type="Panel" unique_id=1706579537 node_paths=PackedStringArray("msg_label", "cancel_button", "confirm_button")]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -67.5
+offset_right = 175.0
+offset_bottom = 87.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wbqho")
+script = ExtResource("1_6yjqp")
+msg_label = NodePath("msg_label")
+cancel_button = NodePath("button_container/cancel")
+confirm_button = NodePath("button_container/ok")
+msg_dist_to_bottom = 71
+
+[node name="msg_label" type="Label" parent="." unique_id=1096340333]
+custom_maximum_size = Vector2(323, 250)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 14.0
+offset_top = 10.5
+offset_right = -13.0
+offset_bottom = 94.5
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
+text = "temp"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="button_container" type="HBoxContainer" parent="." unique_id=64723655]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -46.0
+offset_bottom = -10.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="ok" type="Button" parent="button_container" unique_id=921298862]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "OK"
+
+[node name="cancel" type="Button" parent="button_container" unique_id=258062288]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Cancel"

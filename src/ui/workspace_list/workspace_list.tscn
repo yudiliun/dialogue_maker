@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://svqwyvxnu2yx"]
+
+[ext_resource type="Script" uid="uid://cbdjcobbk2fqs" path="res://src/ui/workspace_list/workspace_list.gd" id="1_5ni2w"]
+[ext_resource type="Texture2D" uid="uid://ukdw18ph52um" path="res://asset/ui_texture/scroll_border.png" id="2_q2aj2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.27450982, 0.46666667, 0.7647059, 1)
+
+[node name="workspace_list" type="Control" unique_id=827629223]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5ni2w")
+
+[node name="bg" type="Panel" parent="." unique_id=1348163872]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+
+[node name="workspace_list_container" type="NinePatchRect" parent="." unique_id=997196557]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = 93.0
+offset_right = -22.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_q2aj2")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="workspace_list" type="ScrollContainer" parent="workspace_list_container" unique_id=1472359817]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_scroll_mode = 3
+
+[node name="workspace_container" type="VBoxContainer" parent="workspace_list_container/workspace_list" unique_id=1218017304]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="add_new" type="Button" parent="workspace_list_container" unique_id=210899127]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -71.0
+offset_top = -56.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "Add new"
+
+[node name="workspace_list_label" type="Label" parent="." unique_id=1161171641]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -98.0
+offset_top = 24.0
+offset_right = 101.0
+offset_bottom = 69.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Workspace List"
+
+[node name="back" type="Button" parent="." unique_id=119625465]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 14.0
+offset_right = 123.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 30
+text = "< Back"
+
+[connection signal="button_up" from="workspace_list_container/add_new" to="." method="_on_add_new_button_up"]
+[connection signal="button_up" from="back" to="." method="_on_back_button_up"]

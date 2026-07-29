@@ -1,0 +1,286 @@
+[gd_scene format=3 uid="uid://h7hy0wekb7cm"]
+
+[ext_resource type="Script" uid="uid://pclacappkb3w" path="res://src/ui/main_ui/main_ui.gd" id="1_jhtxo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_snfnc"]
+bg_color = Color(0.27450982, 0.46666667, 0.7647059, 1)
+
+[node name="main_ui" type="Control" unique_id=934908901]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jhtxo")
+
+[node name="bg" type="Panel" parent="." unique_id=833734065]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_snfnc")
+
+[node name="back" type="Button" parent="." unique_id=1967893838]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 14.0
+offset_right = 123.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 30
+text = "< Back"
+
+[node name="scene_name" type="Label" parent="." unique_id=1190106719]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_top = 11.0
+offset_right = 90.0
+offset_bottom = 53.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "scene_name"
+
+[node name="edit_dial_input" type="TextEdit" parent="." unique_id=708685962]
+custom_minimum_size = Vector2(0, 135)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.49600002
+offset_left = 110.0
+offset_top = 78.0
+offset_right = -109.0
+offset_bottom = -0.16403198
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Edit text here"
+wrap_mode = 1
+
+[node name="idx" type="Label" parent="." unique_id=891110468]
+custom_maximum_size = Vector2(106, 48)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -103.0
+offset_top = 78.0
+offset_right = -1.0
+offset_bottom = 126.0
+grow_horizontal = 0
+theme_override_constants/line_spacing = -8
+theme_override_font_sizes/font_size = 20
+text = "100
+/200"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="line_top" type="ColorRect" parent="." unique_id=2116708139]
+custom_maximum_size = Vector2(-1, 5)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 73.0
+offset_bottom = 78.0
+grow_horizontal = 2
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+
+[node name="line_sep1" type="ColorRect" parent="." unique_id=1610361238]
+custom_maximum_size = Vector2(-1, 5)
+layout_mode = 1
+anchors_preset = -1
+offset_left = -1.0
+offset_top = 310.0
+offset_right = 106.0
+offset_bottom = 315.0
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+
+[node name="line_sep5" type="ColorRect" parent="." unique_id=1293800697]
+custom_maximum_size = Vector2(-1, 5)
+layout_mode = 1
+anchors_preset = -1
+offset_left = -1.0
+offset_top = 398.0
+offset_right = 106.0
+offset_bottom = 403.0
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+
+[node name="line_sep3" type="ColorRect" parent="." unique_id=890614360]
+custom_maximum_size = Vector2(-1, 5)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -106.0
+offset_top = 124.0
+offset_right = 1.0
+offset_bottom = 129.0
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+
+[node name="line_sep2" type="ColorRect" parent="." unique_id=1443481138]
+custom_maximum_size = Vector2(-1, 5)
+layout_mode = 1
+anchors_preset = -1
+offset_left = -2.0
+offset_top = 130.0
+offset_right = 105.0
+offset_bottom = 135.0
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+
+[node name="line_sep" type="ColorRect" parent="." unique_id=798588903]
+custom_maximum_size = Vector2(5, -1)
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 1.0
+offset_left = 105.0
+offset_top = 73.0
+offset_right = 110.0
+offset_bottom = 2.0
+grow_vertical = 2
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+
+[node name="line_sep4" type="ColorRect" parent="." unique_id=1081830038]
+custom_maximum_size = Vector2(5, -1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -108.0
+offset_top = 78.0
+offset_right = -103.0
+offset_bottom = 7.0
+grow_vertical = 2
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+
+[node name="sent_container" type="ScrollContainer" parent="." unique_id=459017007]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 408.0
+offset_right = 102.0
+offset_bottom = -6.0
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+metadata/_edit_group_ = true
+
+[node name="list_container" type="VBoxContainer" parent="sent_container" unique_id=1320629492]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="sent_but_container" type="VBoxContainer" parent="." unique_id=1367997325]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 3.0
+offset_top = 139.0
+offset_right = 101.0
+offset_bottom = 307.0
+metadata/_edit_group_ = true
+
+[node name="add_sent" type="Button" parent="sent_but_container" unique_id=1183340944]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Add"
+
+[node name="insert_sent" type="Button" parent="sent_but_container" unique_id=800813624]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Insert"
+
+[node name="delete_sent" type="Button" parent="sent_but_container" unique_id=923416925]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Delete"
+
+[node name="preview" type="Button" parent="sent_but_container" unique_id=79903507]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Preview"
+
+[node name="seq_label" type="Label" parent="." unique_id=1484058194]
+custom_maximum_size = Vector2(95, 49)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.004
+offset_left = 5.0
+offset_top = 79.0
+offset_right = 94.88
+offset_bottom = 128.0
+grow_horizontal = 2
+theme_override_constants/line_spacing = -7
+theme_override_font_sizes/font_size = 20
+text = "1000/
+10000
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="nav_container" type="VBoxContainer" parent="." unique_id=1669986730]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_top = 132.0
+offset_right = -4.0
+offset_bottom = 354.0
+grow_horizontal = 0
+metadata/_edit_group_ = true
+
+[node name="adv" type="Button" parent="nav_container" unique_id=368560346]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "NEXT >"
+
+[node name="prev" type="Button" parent="nav_container" unique_id=461581120]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "< PREV"
+
+[node name="del" type="Button" parent="nav_container" unique_id=2144541430]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Delete"
+
+[node name="insert" type="Button" parent="nav_container" unique_id=1775219776]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Insert"
+
+[node name="preview" type="Button" parent="nav_container" unique_id=383397113]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "Preview"
+
+[node name="char_but_container" type="VBoxContainer" parent="." unique_id=1132485505]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 319.0
+offset_right = 101.0
+offset_bottom = 359.0
+metadata/_edit_group_ = true
+
+[node name="speaker" type="Button" parent="char_but_container" unique_id=132090611]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Speaker"
+
+[node name="listener" type="Button" parent="char_but_container" unique_id=710754656]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Listener"
+
+[connection signal="button_up" from="back" to="." method="_on_back_button_up"]
+[connection signal="button_up" from="sent_but_container/add_sent" to="." method="_on_add_seq_button_up"]
+[connection signal="button_up" from="sent_but_container/insert_sent" to="." method="_on_insert_sent_button_up"]
+[connection signal="button_up" from="sent_but_container/delete_sent" to="." method="_on_delete_sent_button_up"]
+[connection signal="button_up" from="nav_container/adv" to="." method="_on_adv_button_up"]
+[connection signal="button_up" from="nav_container/prev" to="." method="_on_prev_button_up"]
+[connection signal="button_up" from="nav_container/del" to="." method="_on_del_button_up"]
+[connection signal="button_up" from="nav_container/insert" to="." method="_on_insert_button_up"]
