@@ -31,7 +31,7 @@ offset_bottom = 17.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 20
-text = "edit"
+text = "Edit"
 
 [node name="delete" type="Button" parent="." unique_id=2063795215]
 layout_mode = 1
@@ -47,7 +47,7 @@ offset_bottom = 17.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 20
-text = "delete"
+text = "Delete"
 
 [node name="scene_name" type="Label" parent="." unique_id=211065864]
 layout_mode = 1

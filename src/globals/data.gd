@@ -2,15 +2,18 @@ extends Node
 
 signal dialogue_changed
 
+#Paths
 var path :String = OS.get_environment("USERPROFILE") + "/Documents/Dialogue Maker"
 var cur_dir_path :String = ""
-var cur_dialogue_workspc :String = ""
-var cur_scene_name :String = ""
-var cur_branch_name :String = ""
 var asset_path :String = ""
 var char_path :String = ""
 var scene_path :String = ""
 
+#Names
+var cur_dialogue_workspc :String = ""
+var cur_scene_name :String = ""
+var cur_branch_name :String = ""
+var cur_chr_name :String = ""
 
 var workspace_list :Dictionary = {
 	
@@ -20,6 +23,15 @@ var cur_scene_list :Dictionary = {
 	
 }
 
+var cur_chr_list :Dictionary = {
+	
+}
+#Character stuff
+var cur_chr_info :Dictionary = {
+	
+}
+
+#Dialogue stuff
 var cur_dialogue_scene :Dictionary = {
 	
 }
@@ -83,8 +95,10 @@ func workspc_init() -> void:
 	asset_path = cur_dir_path.path_join("assets")
 	char_path = cur_dir_path.path_join("characters")
 	scene_path = cur_dir_path.path_join("scenes")
+	cur_chr_list.clear()
 	cur_scene_list.clear()
 	cur_dialogue_scene.clear()
+	cur_chr_info.clear()
 	#assets folder
 	if !DirAccess.dir_exists_absolute(asset_path):
 		DirAccess.make_dir_absolute(asset_path)
@@ -95,14 +109,30 @@ func workspc_init() -> void:
 	if !DirAccess.dir_exists_absolute(scene_path):
 		DirAccess.make_dir_absolute(scene_path)
 	var scene_list :PackedStringArray = DirAccess.get_files_at(scene_path)
+	var chr_list :PackedStringArray = DirAccess.get_files_at(char_path)
 	for scene in scene_list:
 		var file_path :String = scene_path.path_join(scene)
 		scene = scene.get_basename()
 		cur_scene_list[scene] = file_path
+	for chr in chr_list:
+		var file_path :String = char_path.path_join(chr)
+		chr = chr.get_basename()
+		cur_chr_list[chr] = file_path
+
+func add_chr(chr_name :String) -> void:
+	cur_chr_list[chr_name] = char_path.path_join(chr_name) + ".json"
+	save_data(cur_chr_list.get(chr_name), cur_chr_info)
 
 func add_scene(scene_name :String) -> void:
 	cur_scene_list[scene_name] = scene_path.path_join(scene_name) + ".json"
 	save_data(cur_scene_list[scene_name], cur_dialogue_scene)
+
+func del_chr(chr_name :String) -> void:
+	var del_error :Error = DirAccess.remove_absolute(cur_chr_list.get(chr_name))
+	if del_error != Error.OK:
+		Core.show_error("Failed to delete certain file")
+		return
+	cur_chr_list.erase(chr_name)
 
 func del_scene(scene_name :String) -> void:
 	var del_error :Error = DirAccess.remove_absolute(cur_scene_list.get(scene_name))
