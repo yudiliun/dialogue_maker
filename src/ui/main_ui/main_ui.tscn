@@ -37,13 +37,14 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -90.0
+offset_left = -512.0
 offset_top = 11.0
-offset_right = 90.0
+offset_right = 515.0
 offset_bottom = 53.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 30
 text = "scene_name"
+horizontal_alignment = 1
 
 [node name="edit_dial_input" type="TextEdit" parent="." unique_id=708685962]
 custom_minimum_size = Vector2(0, 135)

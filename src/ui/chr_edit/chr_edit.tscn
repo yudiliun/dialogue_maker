@@ -1,0 +1,269 @@
+[gd_scene format=3 uid="uid://b01q346y7be4i"]
+
+[ext_resource type="Script" uid="uid://bf7687cfsu2rm" path="res://src/ui/chr_edit/chr_edit.gd" id="1_wq4j4"]
+
+[node name="chr_edit" type="Control" unique_id=965241251]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wq4j4")
+
+[node name="bg" type="ColorRect" parent="." unique_id=1210104441]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.27450982, 0.46666667, 0.7647059, 1)
+
+[node name="back" type="Button" parent="bg" unique_id=1049756933]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 14.0
+offset_right = 123.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 30
+text = "< Back"
+
+[node name="chr_name" type="RichTextLabel" parent="." unique_id=1915645282]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -504.0
+offset_top = 20.0
+offset_right = 507.0
+offset_bottom = 62.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
+bbcode_enabled = true
+text = "chr"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="line_top" type="ColorRect" parent="." unique_id=657115918]
+custom_maximum_size = Vector2(-1, 5)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 73.0
+offset_right = 15.0
+offset_bottom = 78.0
+grow_horizontal = 2
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+
+[node name="spr1" type="ColorRect" parent="." unique_id=1593279122]
+custom_maximum_size = Vector2(-1, 5)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.001
+anchor_top = 0.45900002
+anchor_right = 0.286
+anchor_bottom = 0.45900002
+offset_left = 0.2800001
+offset_top = -2.480011
+offset_right = -0.08001709
+offset_bottom = 2.519989
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+
+[node name="spr2" type="ColorRect" parent="." unique_id=3904069]
+custom_maximum_size = Vector2(-1, 5)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.287
+anchor_right = 1.011
+offset_left = -0.35998535
+offset_top = 146.0
+offset_right = -0.080078125
+offset_bottom = 151.0
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+
+[node name="spr3" type="ColorRect" parent="." unique_id=80367485]
+custom_maximum_size = Vector2(-1, 5)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.287
+anchor_right = 1.011
+offset_left = -0.35998535
+offset_top = 200.0
+offset_right = -0.080078125
+offset_bottom = 205.0
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+
+[node name="spr" type="ColorRect" parent="." unique_id=1773883550]
+custom_maximum_size = Vector2(5, -1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.284
+anchor_right = 0.287
+anchor_bottom = 1.0
+offset_left = -0.52001953
+offset_top = 74.0
+offset_right = 0.64001465
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+
+[node name="portrait" type="Label" parent="." unique_id=1587935809]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 35.0
+offset_top = 73.0
+offset_right = 147.0
+offset_bottom = 115.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "Portrait"
+
+[node name="sprite" type="Label" parent="." unique_id=1490691928]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.46500003
+anchor_bottom = 0.46500003
+offset_left = 35.0
+offset_top = 0.19998169
+offset_right = 147.0
+offset_bottom = 42.19998
+theme_override_font_sizes/font_size = 30
+text = "Sprite"
+
+[node name="sprite_prev" type="TextureRect" parent="." unique_id=184208883]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.554
+anchor_right = 0.259
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 0.11999512
+offset_right = 0.47998047
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="port_prev" type="TextureRect" parent="." unique_id=140639529]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.165
+anchor_bottom = 0.43500003
+offset_left = 25.0
+offset_top = 127.0
+offset_right = 1.769989
+offset_bottom = -0.2000122
+grow_horizontal = 0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="change_port" type="Button" parent="." unique_id=1040237007]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.28100002
+anchor_right = 0.28100002
+offset_left = -97.68002
+offset_top = 81.0
+offset_right = 0.3199768
+offset_bottom = 124.0
+theme_override_font_sizes/font_size = 25
+text = "Change"
+
+[node name="change_sprite" type="Button" parent="." unique_id=1401226015]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.28
+anchor_top = 0.46800002
+anchor_right = 0.28
+anchor_bottom = 0.46800002
+offset_left = -97.399994
+offset_top = 0.039978027
+offset_right = 0.6000061
+offset_bottom = 43.039978
+theme_override_font_sizes/font_size = 25
+text = "Change"
+
+[node name="emotion_name" type="Label" parent="." unique_id=1563519371]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.289
+anchor_right = 0.99300003
+offset_left = 0.07998657
+offset_top = 155.0
+offset_right = -0.040039063
+offset_bottom = 197.00003
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="emotion_list_container" type="ScrollContainer" parent="." unique_id=404817133]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.291
+anchor_right = 0.99200004
+anchor_bottom = 1.0
+offset_left = 0.519989
+offset_top = 211.0
+offset_right = 0.23999023
+offset_bottom = -7.0
+
+[node name="emotion_list" type="VBoxContainer" parent="emotion_list_container" unique_id=1363881372]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="btn_container" type="HBoxContainer" parent="." unique_id=856711038]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.28800002
+anchor_right = 0.998
+offset_left = 2.3599854
+offset_top = 85.0
+offset_right = -0.44006348
+offset_bottom = 135.0
+theme_override_constants/separation = 10
+
+[node name="delete_e" type="Button" parent="btn_container" unique_id=603839056]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Delete emotion"
+
+[node name="add_e" type="Button" parent="btn_container" unique_id=318532657]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Add emotion"
+
+[node name="rename_e" type="Button" parent="btn_container" unique_id=450020045]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Rename emotion"
+
+[node name="rename_chr" type="Button" parent="btn_container" unique_id=1669272133]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Rename character"
+
+[node name="fd_open" type="FileDialog" parent="." unique_id=736514839]
+oversampling_override = 1.0
+title = "Select a file"
+initial_position = 2
+size = Vector2i(800, 500)
+ok_button_text = "Choose"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png,*.jpg,*.jpeg, *svg;Image Files;image/png,image/jpeg.")
+
+[connection signal="button_up" from="bg/back" to="." method="_on_back_button_up"]
+[connection signal="button_up" from="btn_container/delete_e" to="." method="_on_delete_e_button_up"]
+[connection signal="button_up" from="btn_container/add_e" to="." method="_on_add_e_button_up"]
+[connection signal="button_up" from="btn_container/rename_e" to="." method="_on_rename_e_button_up"]
+[connection signal="button_up" from="btn_container/rename_chr" to="." method="_on_rename_chr_button_up"]

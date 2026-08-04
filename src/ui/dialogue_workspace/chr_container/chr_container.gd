@@ -7,7 +7,8 @@ func _ready() -> void:
 	chr_name_label.text = chr_name
 
 func _on_edit_button_up() -> void:
-	pass # Replace with function body.
+	Data.chr_info_init(chr_name)
+	Core.change_ui(Core.ui_list.chr_edit)
 
 func _on_delete_button_up() -> void:
 	var new_popup :PopUp = Core.popup(Core.popup_ui_list.popup)

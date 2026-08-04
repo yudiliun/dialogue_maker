@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://brvapxolk61n4" path="res://asset/ui_texture/list_border.png" id="1_k1805"]
 [ext_resource type="Script" uid="uid://tmc3c2mm1ewo" path="res://src/ui/dialogue_workspace/chr_container/chr_container.gd" id="2_bdd05"]
-[ext_resource type="Texture2D" uid="uid://bnq2sq7dkxnt1" path="res://icon.svg" id="2_jef08"]
 
 [node name="chr_container" type="NinePatchRect" unique_id=93086687]
 texture_filter = 1
@@ -21,7 +20,6 @@ offset_left = 30.0
 offset_top = 20.0
 offset_right = 156.0
 offset_bottom = 146.0
-texture = ExtResource("2_jef08")
 expand_mode = 1
 stretch_mode = 4
 

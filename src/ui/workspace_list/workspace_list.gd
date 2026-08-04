@@ -24,7 +24,7 @@ func add(d_name :String, popup :PopUp) -> void:
 		new_popup.message = "Workspace of the same name already exist!"
 		new_popup.cancel_visible = false
 		return
-	Data.add(d_name)
+	Data.add_workspace(d_name)
 	add_list(d_name)
 	popup.can_free = true
 

@@ -7,7 +7,8 @@ const ui_list :Dictionary = {
 	"main_menu" : "uid://dcqyuhlqltwul",
 	"main_ui" : "uid://h7hy0wekb7cm",
 	"workspace_list" : "uid://svqwyvxnu2yx",
-	"dialogue_workspace" : "uid://1arol4aoyd75"
+	"dialogue_workspace" : "uid://1arol4aoyd75",
+	"chr_edit" : "uid://b01q346y7be4i"
 }
 
 const pause_ui_list :Dictionary = {

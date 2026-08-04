@@ -12,6 +12,8 @@ config_version=5
 
 config/name="dialogue_maker"
 run/main_scene="uid://c8mv05pac1xel"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="DialogueMaker"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
@@ -25,6 +27,7 @@ Data="*uid://cfu3shj6lh7g3"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/mode=2
+window/subwindows/embed_subwindows=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
